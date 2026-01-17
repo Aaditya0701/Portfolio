@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
     <!-- --------- Treking icon ---------- -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <title>Portfolio | Aaditya Kamlaskar</title>
 </head>
@@ -214,7 +214,7 @@
                         <i class="fas fa-person-hiking"></i>
                         <h3>The Global Yatrik</h3>
                         <label>
-                            It's a tours & trsvelling company's website simply created using HTML, CSS, & JavaScript 
+                            It's a tours & trsvelling company's website simply created using HTML, CSS, & JavaScript
                             where user can find the best places to visit in India and also can explore packages
                             for different places.
                         </label>
@@ -265,10 +265,26 @@
                             <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
                             <p><i class="uil uil-envelope"></i> Email: <a
                                     href="mailto:aadityakamlaskar1211@gmail.com">aadityakamlaskar1211@gmail.com</a></p>
-                           <p><i class="uil uil-phone"></i> <a href="tel:+918956564834">Tel: +91 895 656 4834</a></p>
+                            <p><i class="uil uil-phone"></i> <a href="tel:+918956564834">Tel: +91 895 656 4834</a></p>
                         </div>
                     </div>
                     <div class="col">
+
+                        <div class="form-control">
+                            <div class="form-inputs">
+                                <input type="text" id="name" class="input-field" placeholder="Name">
+                                <input type="email" id="email" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="text-area">
+                                <textarea id="message" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button class="btn" type="button" onclick="sendEmail()">
+                                    Send <i class="uil uil-message"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 
                         <div class="form-control">
                             <div class="form-inputs">
                                 <input type="text" class="input-field" placeholder="Name">
@@ -280,7 +296,7 @@
                             <div class="form-button">
                                 <button class="btn">Send <i class="uil uil-message"></i></button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -348,6 +364,18 @@
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
+
+    <!-- ----- Email-Config JS ----- -->
+    <script src="assets/js/email-config.js"></script>
+
+
+    <!-- Fast automatic email sending EmailJs -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
+        })();
+    </script>
 </body>
 
 </html>
